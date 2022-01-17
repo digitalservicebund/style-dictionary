@@ -1,0 +1,8 @@
+size:
+  font:
+    xs:
+      value: 0.875
+    sm:
+      value: 1
+    base:
+      value: 1.125

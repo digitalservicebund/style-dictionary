@@ -1,0 +1,11 @@
+color:
+  base:
+    white:
+      value: "#fff"
+    black:
+      value: "#000"
+    yellow:
+      500:
+        value: "#faf0ae"
+      400:
+        value: "#fbf3be"

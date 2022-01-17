@@ -1,0 +1,43 @@
+{
+  "name": "@digitalservice4germany/style-dictionary",
+  "version": "0.0.0",
+  "description": "Home of our design tokens.",
+  "scripts": {
+    "build": "ts-node build.ts",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "ts-node build.ts",
+    "release": "np",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "Joschka de Cuveland <joschka.decuveland@digitalservice.bund.de>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/lodash": "^4.14.178",
+    "@types/prettier": "^2.4.3",
+    "@types/rimraf": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.1",
+    "lodash": "^4.17.21",
+    "np": "^7.6.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "style-dictionary": "^3.1.1",
+    "tiny-invariant": "^1.2.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5",
+    "yaml": "^1.10.2"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,js,yaml,md}": "prettier --write"
+  }
+}

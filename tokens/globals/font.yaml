@@ -1,0 +1,9 @@
+font:
+  family:
+    sans:
+      value: "BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif"
+  weight:
+    regular:
+      value: 400
+    bold:
+      value: 700

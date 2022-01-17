@@ -1,0 +1,5 @@
+color:
+  signal:
+    warning:
+      value: "{color.base.yellow.500.value}"
+      comment: "Use this color to highlight a warning or similar."

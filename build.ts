@@ -30,7 +30,7 @@ StyleDictionary.registerFormat({
               return merge(acc, {
                 theme: {
                   colors: token.path
-                    .slice(1)
+                    .slice(2)
                     .reduceRight((acc, k) => ({ [k]: acc }), token.value),
                 },
               });

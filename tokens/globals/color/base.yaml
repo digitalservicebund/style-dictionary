@@ -21,6 +21,82 @@ color:
         value: "#004b76"
       900:
         value: "#003350"
+    gray:
+      100:
+        value: "#f6f7f8"
+      200:
+        value: "#eff2f4"
+      300:
+        value: "#edeef0"
+      400:
+        value: "#dcdee1"
+      500:
+        value: "#cacdd2"
+      600:
+        value: "#b8bdc3"
+      700:
+        value: "#a6acb5"
+      800:
+        value: "#717a88"
+      900:
+        value: "#4e596a"
+    green:
+      100:
+        value: "#e8f7f0"
+      200:
+        value: "#ccebdd"
+      300:
+        value: "#b0d8c6"
+      400:
+        value: "#97ccb4"
+      500:
+        value: "#65b491"
+      600:
+        value: "#349d6e"
+      700:
+        value: "#01854a"
+      800:
+        value: "#006538"
+      900:
+        value: "#003e22"
+    orange:
+      100:
+        value: "#fef7e8"
+      200:
+        value: "#fae5bb"
+      300:
+        value: "#f9d791"
+      400:
+        value: "#f8c967"
+      500:
+        value: "#f7bb3d"
+      600:
+        value: "#e9aa26"
+      700:
+        value: "#d79815"
+      800:
+        value: "#c18509"
+      900:
+        value: "#ad7500"
+    red:
+      100:
+        value: "#fcf2f5"
+      200:
+        value: "#f9e5ec"
+      300:
+        value: "#f2ccd8"
+      400:
+        value: "#ecb3c5"
+      500:
+        value: "#e699b1"
+      600:
+        value: "#d9668b"
+      700:
+        value: "#c61a50"
+      800:
+        value: "#b0243f"
+      900:
+        value: "#8e001b"
     white:
       value: "#fff"
     yellow:

@@ -1,11 +1,44 @@
 color:
   base:
+    black:
+      value: "#0b0c0c"
+    blue:
+      100:
+        value: "#f2f6f8"
+      200:
+        value: "#ecf1f4"
+      300:
+        value: "#dce8ef"
+      400:
+        value: "#ccdbe4"
+      500:
+        value: "#b3c9d6"
+      600:
+        value: "#6693ad"
+      700:
+        value: "#336f91"
+      800:
+        value: "#004b76"
+      900:
+        value: "#003350"
     white:
       value: "#fff"
-    black:
-      value: "#000"
     yellow:
-      500:
-        value: "#faf0ae"
+      100:
+        value: "#fefcef"
+      200:
+        value: "#fff9d2"
+      300:
+        value: "#f9ec9e"
       400:
-        value: "#fbf3be"
+        value: "#f7e67d"
+      500:
+        value: "#f5e05d"
+      600:
+        value: "#f2dc5d"
+      700:
+        value: "#e5ce5c"
+      800:
+        value: "#dac23c"
+      900:
+        value: "#c3a91e"

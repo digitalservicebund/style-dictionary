@@ -1,7 +1,7 @@
 {
   "name": "@digitalservice4germany/style-dictionary",
   "version": "0.0.0",
-  "description": "Home of our design tokens.",
+  "description": "Keep styles consistent and synchronized across multiple platforms.",
   "scripts": {
     "build": "ts-node build.ts",
     "lint": "eslint . --ext .ts",

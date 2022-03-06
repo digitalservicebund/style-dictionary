@@ -1,0 +1,25 @@
+color:
+  text:
+    button:
+      primary:
+        default:
+          value: "{color.base.white.value}"
+        active:
+          value: "{color.base.blue.900.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      secondary:
+        default:
+          value: "{color.base.black.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      tertiary:
+        default:
+          value: "{color.base.blue.900.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      ghost:
+        default:
+          value: "{color.base.blue.900.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"

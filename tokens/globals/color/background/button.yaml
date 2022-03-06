@@ -1,0 +1,36 @@
+color:
+  background:
+    button:
+      primary:
+        default:
+          value: "{color.base.blue.900.value}"
+        hover:
+          value: "{color.base.blue.700.value}"
+        focus:
+          value: "{color.base.blue.900.value}"
+        active:
+          value: "{color.base.blue.500.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      secondary:
+        default:
+          value: "{color.base.yellow.500.value}"
+        hover:
+          value: "{color.base.yellow.700.value}"
+        focus:
+          value: "{color.base.yellow.500.value}"
+        active:
+          value: "{color.base.yellow.400.value}"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      tertiary:
+        default:
+          value: "transparent"
+        hover:
+          value: "{color.base.blue.200.value}"
+        focus:
+          value: "{color.base.blue.200.value}"
+        active:
+          value: "{color.base.blue.200.value}"
+        disabled:
+          value: "transparent"

@@ -1,0 +1,25 @@
+color:
+  border:
+    button:
+      tertiary:
+        default:
+          value: "{color.base.blue.900.value}"
+        hover:
+          value: "{color.base.blue.900.value}"
+        focus:
+          value: "{color.base.blue.900.value}"
+        active:
+          value: "transparent"
+        disabled:
+          value: "{color.base.gray.400.value}"
+      ghost:
+        default:
+          value: "transparent"
+        hover:
+          value: "{color.base.gray.600.value}"
+        focus:
+          value: "{color.base.gray.600.value}"
+        active:
+          value: "{color.base.gray.400.value}"
+        disabled:
+          value: "transparent"

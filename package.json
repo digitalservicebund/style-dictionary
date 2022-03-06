@@ -12,11 +12,11 @@
   "keywords": [],
   "author": "Joschka de Cuveland <joschka.decuveland@digitalservice.bund.de>",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "np": {
+    "contents": "dist"
+  },
   "devDependencies": {
     "@types/lodash": "^4.14.178",
     "@types/prettier": "^2.4.3",

@@ -1,12 +1,11 @@
 import StyleDictionary from "style-dictionary";
 import type { Dictionary, File } from "style-dictionary";
-import { readdirSync, writeFileSync, Dirent } from "fs";
+import { readdirSync, Dirent } from "fs";
 import { merge } from "lodash";
 import { format } from "prettier";
 import invariant from "tiny-invariant";
 import yaml from "yaml";
 import rimraf from "rimraf";
-import { exec } from "child_process";
 
 const { fileHeader } = StyleDictionary.formatHelpers;
 
@@ -26,7 +25,7 @@ StyleDictionary.registerFormat({
             const { category, type, item } = token.attributes;
             // console.log(category, type, item, token);
 
-            if (token.path[0] === "color") {
+            if (token.path[0] === "color" && token.path[1] === "base") {
               return merge(acc, {
                 theme: {
                   colors: token.path
@@ -85,45 +84,24 @@ const getStyleDictionaryConfig = (brand: string, platform: string) => {
       `tokens/platforms/${platform}/**/*.{json,js,yaml}`,
     ],
     platforms: {
-      ...["css", "scss", "less", "stylus"].reduce((acc, t) => {
-        return Object.assign({}, acc, {
-          [t]: {
-            transformGroup: t === "stylus" ? "css" : t,
-            buildPath: `dist/${t}/${brand}/`,
-            prefix: "ds4g",
-            files: [
-              {
-                destination: `variables.${t}`,
-                format: `${t}/variables`,
-                options: {
-                  outputReferences: true,
-                },
-              },
-            ],
-          },
-        });
-      }, {}),
-      flutter: {
-        buildPath: `dist/flutter/${brand}/`,
-        transformGroup: "flutter",
+      js: {
+        buildPath: brand === "default" ? "dist/" : `dist/${brand}/`,
+        transforms: ["name/cti/camel", "size/rem"],
         files: [
+          { destination: "index.js", format: "javascript/es6" },
           {
-            destination: "tokens.dart",
-            format: "flutter/class.dart",
+            format: "typescript/es6-declarations",
+            destination: "index.d.ts",
           },
         ],
       },
-      json: {
-        buildPath: `dist/json/${brand}/`,
-        transforms: ["attribute/cti", "name/cti/camel", "size/rem"],
-        files: [{ destination: "allTokens.json", format: "json/flat" }],
-      },
       tailwind: {
-        buildPath: `dist/tailwind/${brand}/`,
+        buildPath:
+          brand === "default" ? "dist/tailwind/" : `dist/tailwind/${brand}/`,
         transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
         files: [
           {
-            destination: "tailwind.config.js",
+            destination: "index.js",
             format: "tailwind",
           },
         ],
@@ -148,32 +126,4 @@ rimraf("./dist", () => {
       ).buildPlatform(platform);
     });
   });
-
-  writeFileSync(
-    "./dist/index.js",
-    format(
-      `
-  module.exports = { tailwindPreset: {${brands
-    .map(
-      (brand) => `${brand}: require("./tailwind/${brand}/tailwind.config.js")`
-    )
-    .join(",")}
-  }};`,
-      { parser: "babel" }
-    )
-  );
-
-  exec(
-    "./node_modules/.bin/tsc dist/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist",
-    (error, _, stderr) => {
-      if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-      }
-      if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-      }
-    }
-  );
 });

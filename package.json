@@ -7,7 +7,7 @@
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "ts-node build.ts",
     "release": "np",
-    "prepare": "husky install"
+    "prepare": "husky install || echo 'husky install failed!'"
   },
   "keywords": [],
   "author": "Joschka de Cuveland <joschka.decuveland@digitalservice.bund.de>",

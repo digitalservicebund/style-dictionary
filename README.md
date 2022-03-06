@@ -62,3 +62,14 @@ See [Stitches docs](https://stitches.dev/docs/tokens) for more information.
 ```
 
 Only a sensible subset of the tokens is available in the Stitches configuration.
+
+## Development
+
+### npm link
+
+Link the `dist` directory, not the root directory.
+
+1. `npm run build`
+2. `cp package.json dist/`
+3. `cd dist`
+4. `npm link` (inside `dist`)

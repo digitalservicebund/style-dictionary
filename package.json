@@ -5,7 +5,6 @@
   "scripts": {
     "build": "ts-node build.ts",
     "lint": "eslint . --ext .ts",
-    "release": "npm run build && np --contents=./dist --no-tests",
     "postversion": "cp package.json LICENSE README.md ./dist/",
     "prepare": "husky install || echo 'husky install failed!'"
   },
@@ -27,7 +26,6 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.1",
     "lodash": "^4.17.21",
-    "np": "^7.6.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "style-dictionary": "^3.1.1",

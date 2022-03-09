@@ -73,3 +73,13 @@ Link the `dist` directory, not the root directory.
 2. `cp package.json dist/`
 3. `cd dist`
 4. `npm link` (inside `dist`)
+
+### Release
+
+1. `npm run build`
+2. `git status` (working directory needs to be clean)
+3. `npm version patch` (or minor, major)
+4. `npm push`
+5. `npm push origin --tags`
+6. `cd dist` (important: publish from dist directory!)
+7. `npm publish`

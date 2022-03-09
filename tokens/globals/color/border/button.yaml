@@ -3,15 +3,15 @@ color:
     button:
       tertiary:
         default:
-          value: "{color.base.blue.900.value}"
+          value: "{color.base.blue.800.value}"
         hover:
-          value: "{color.base.blue.900.value}"
+          value: "{color.base.blue.800.value}"
         focus:
-          value: "{color.base.blue.900.value}"
+          value: "{color.base.blue.800.value}"
         active:
           value: "transparent"
         disabled:
-          value: "{color.base.gray.400.value}"
+          value: "{color.base.gray.600.value}"
       ghost:
         default:
           value: "transparent"
@@ -20,6 +20,6 @@ color:
         focus:
           value: "{color.base.gray.600.value}"
         active:
-          value: "{color.base.gray.400.value}"
+          value: "{color.base.gray.600.value}"
         disabled:
           value: "transparent"

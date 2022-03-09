@@ -5,8 +5,8 @@
   "scripts": {
     "build": "ts-node build.ts",
     "lint": "eslint . --ext .ts",
-    "prepublishOnly": "ts-node build.ts",
-    "release": "np",
+    "release": "npm run build && np --contents=./dist --no-tests",
+    "postversion": "cp package.json LICENSE README.md ./dist/",
     "prepare": "husky install || echo 'husky install failed!'"
   },
   "keywords": [],
@@ -14,9 +14,6 @@
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
-  "np": {
-    "contents": "dist"
-  },
   "devDependencies": {
     "@types/lodash": "^4.14.178",
     "@types/prettier": "^2.4.3",

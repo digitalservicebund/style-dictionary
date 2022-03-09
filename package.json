@@ -1,6 +1,6 @@
 {
   "name": "@digitalservice4germany/style-dictionary",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Keep styles consistent and synchronized across multiple platforms.",
   "scripts": {
     "build": "ts-node build.ts",

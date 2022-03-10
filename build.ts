@@ -80,7 +80,7 @@ StyleDictionary.registerFormat({
   name: "stitches",
   formatter: ({ dictionary, file }: { dictionary: Dictionary; file: File }) => {
     return format(
-      `${fileHeader({ file })}module.exports = ${JSON.stringify(
+      `${fileHeader({ file })}export default ${JSON.stringify(
         dictionary.allTokens.reduce(
           (acc, token) => {
             invariant(token.attributes, "Token attributes are undefined.");
@@ -126,7 +126,7 @@ StyleDictionary.registerFormat({
               return merge(acc, {
                 theme: {
                   fontFamily: {
-                    [token.name]: token.value.split(/\s*,\s*/),
+                    [token.name]: token.value,
                   },
                 },
               });

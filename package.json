@@ -3,7 +3,8 @@
   "version": "0.0.3",
   "description": "Keep styles consistent and synchronized across multiple platforms.",
   "scripts": {
-    "build": "ts-node build.ts",
+    "build": "ts-node build.ts && npm run ts-types",
+    "ts-types": "tsc --emitDeclarationOnly -d --allowJs ./dist/stitches/index.js ./dist/tailwind/index.js",
     "lint": "eslint . --ext .ts",
     "postversion": "cp package.json LICENSE README.md ./dist/",
     "prepare": "husky install || echo 'husky install failed!'"

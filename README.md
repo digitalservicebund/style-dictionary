@@ -15,7 +15,7 @@ Currently the following platforms are supported. Please get in touch if you need
 ### Installation
 
 ```sh
-npm install @digitalService4Germany/style-dictionary
+npm install @digitalservice4germany/style-dictionary
 ```
 
 ### Usage examples

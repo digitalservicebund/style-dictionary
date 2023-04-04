@@ -2,6 +2,10 @@ font:
   family:
     sans:
       value: "BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif"
+    serif:
+      value: 'BundesSerifWeb, Cambria, Georgia, "Times New Roman", serif'
+    condensed:
+      value: "BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica, sans-serif"
   weight:
     regular:
       value: 400

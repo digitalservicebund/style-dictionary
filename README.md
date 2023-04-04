@@ -82,4 +82,4 @@ Link the `dist` directory, not the root directory.
 4. `git push`
 5. `git push origin --tags`
 6. `cd dist` (important: publish from dist directory!)
-7. `npm publish`
+7. `npm publish` (set publish token first `npm config set _authToken=<TOKEN>`)

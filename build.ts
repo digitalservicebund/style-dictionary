@@ -198,20 +198,20 @@ const getStyleDictionaryConfig = (brand: string, platform: string) => {
   };
 };
 
-rimraf("./dist", () => {
-  const platforms = Object.keys(getStyleDictionaryConfig("_", "_").platforms);
+rimraf.sync("./dist");
 
-  const brands = readdirSync("./tokens/brands", {
-    withFileTypes: true,
-  })
-    .filter((c: Dirent) => c.isDirectory())
-    .map((c) => c.name);
+const platforms = Object.keys(getStyleDictionaryConfig("_", "_").platforms);
 
-  brands.map((brand) => {
-    platforms.map((platform) => {
-      StyleDictionary.extend(
-        getStyleDictionaryConfig(brand, platform)
-      ).buildPlatform(platform);
-    });
+const brands = readdirSync("./tokens/brands", {
+  withFileTypes: true,
+})
+  .filter((c: Dirent) => c.isDirectory())
+  .map((c) => c.name);
+
+brands.map((brand) => {
+  platforms.map((platform) => {
+    StyleDictionary.extend(
+      getStyleDictionaryConfig(brand, platform)
+    ).buildPlatform(platform);
   });
 });

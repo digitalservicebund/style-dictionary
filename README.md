@@ -76,10 +76,11 @@ Link the `dist` directory, not the root directory.
 
 ### Release
 
-1. `npm run build`
-2. `git status` (working directory needs to be clean)
-3. `npm version patch` (or minor, major)
-4. `git push`
-5. `git push origin --tags`
-6. `cd dist` (important: publish from dist directory!)
-7. `npm publish` (set publish token first `npm config set _authToken=<TOKEN>`)
+1. update changelog
+2. `npm run build`
+3. `git status` (working directory needs to be clean)
+4. `npm version patch` (or minor, major)
+5. `git push`
+6. `git push origin --tags`
+7. `cd dist` (important: publish from dist directory!)
+8. `npm publish` (set publish token first `npm config set _authToken=<TOKEN>`)

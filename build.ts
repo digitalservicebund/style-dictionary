@@ -166,6 +166,7 @@ const getStyleDictionaryConfig = (brand: string, platform: string) => {
         transforms: ["name/cti/camel", "size/rem"],
         files: [
           { destination: "index.js", format: "javascript/es6" },
+          { destination: "tokens.json", format: "json/nested" },
           {
             format: "typescript/es6-declarations",
             destination: "index.d.ts",

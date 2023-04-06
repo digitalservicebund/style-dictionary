@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Joschka de Cuveland <joschka.decuveland@digitalservice.bund.de>",
-  "homepage": "https://github.com/digitalservicebund/style-dictionary#readme",
+  "homepage": "https://digitalservicebund.github.io/style-dictionary/",
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",

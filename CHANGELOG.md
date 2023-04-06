@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+### Added
+
+- A dedicated [documentation website](https://digitalservicebund.github.io/style-dictionary/)
+
 ## [1.1.0] - 2023-04-04
 
 ### Added

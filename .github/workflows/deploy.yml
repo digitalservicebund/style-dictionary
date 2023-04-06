@@ -10,8 +10,20 @@ defaults:
   run:
     working-directory: website
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:

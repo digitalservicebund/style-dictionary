@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/digitalservicebund/style-dictionary/tree/main/website/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/digitalservicebund/style-dictionary/tree/main/website/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -64,9 +64,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Style Dictionary",
         logo: {
-          alt: "My Site Logo",
+          alt: "DigitalService Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -74,12 +74,17 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            href: "https://github.com/digitalservicebund/style-dictionary",
+            label: "source code",
+            position: "right",
+          },
+          {
+            href: "https://www.npmjs.com/package/@digitalservice4germany/style-dictionary",
+            label: "npm",
             position: "right",
           },
         ],
@@ -97,23 +102,6 @@ const config = {
             ],
           },
           {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
             title: "More",
             items: [
               {
@@ -122,12 +110,16 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/digitalservicebund/style-dictionary",
+              },
+              {
+                label: "npm",
+                href: "https://www.npmjs.com/package/@digitalservice4germany/style-dictionary",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Last update: ${new Date()}. Created with Docusaurus. Illustrations from unDraw.`,
       },
       prism: {
         theme: lightCodeTheme,

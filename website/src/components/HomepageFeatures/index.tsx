@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Design Tokens',
+    Svg: require('@site/static/img/undraw_color_palette_re_dwy7.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Design tokens are one part of a design system. Essentially they are variables that store small design decisions in a key-value format.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Style Dictionary',
+    Svg: require('@site/static/img/undraw_my_files_swob.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        A style dictionary is a collection of design tokens. Tokens are stored in a platform-agnostic way. In plain text files.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Exports',
+    Svg: require('@site/static/img/undraw_dev_productivity_re_fylf.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Tokens are exported in various formats to be consumed by different platforms and languages. The exports can be installed via npm.
       </>
     ),
   },

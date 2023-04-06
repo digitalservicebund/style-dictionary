@@ -44,13 +44,6 @@ const config = {
           editUrl:
             "https://github.com/digitalservicebund/style-dictionary/tree/main/website/",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/digitalservicebund/style-dictionary/tree/main/website/",
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -76,7 +69,6 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/digitalservicebund/style-dictionary",
             label: "source code",
@@ -96,18 +88,22 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Getting started",
                 to: "/docs/intro",
+              },
+              {
+                label: "How-to guides",
+                to: "/docs/category/how-to-guides",
+              },
+              {
+                label: "Reference",
+                to: "/docs/category/reference",
               },
             ],
           },
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "GitHub",
                 href: "https://github.com/digitalservicebund/style-dictionary",

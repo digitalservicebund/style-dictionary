@@ -2,11 +2,9 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -27,6 +25,7 @@ jobs:
         with:
           name: dist
           path: dist
+          retention-days: 14
 
   website:
     needs: [build]
@@ -48,6 +47,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: website/package-lock.json
 
       - run: npm ci
         working-directory: website

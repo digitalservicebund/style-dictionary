@@ -8,8 +8,7 @@
     "ts-types": "tsc --emitDeclarationOnly --esModuleInterop --moduleResolution nodenext --target es2015 -d --allowJs ./dist/stitches/index.js ./dist/tailwind/index.js",
     "lint": "eslint . --ext .ts",
     "postversion": "cp package.json LICENSE README.md ./dist/",
-    "test": "jest test/*",
-    "prepare": "husky install || echo 'husky install failed!'"
+    "test": "jest test/*"
   },
   "keywords": [],
   "author": "Joschka de Cuveland <joschka.decuveland@digitalservice.bund.de>",
@@ -39,8 +38,7 @@
     "typescript": "^5.0.3",
     "yaml": "^2.2.1"
   },
-  "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "*.{ts,js,yaml,md}": "prettier --write"
+  "volta": {
+    "node": "18.15.0"
   }
 }

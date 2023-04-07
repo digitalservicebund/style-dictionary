@@ -41,7 +41,7 @@ jobs:
           git commit -m "Release ${{ env.NEW_VERSION }}"
           git tag ${{ env.NEW_VERSION }}
 
-      - run: npm publish --dry-run
+      - run: npm publish
         working-directory: dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -50,12 +50,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "push"
-          # git push origin && git push --tags
+          git push origin && git push --tags
 
-      # - name: Create GitHub release
-      #   uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
-      #   with:
-      #     tag_name: ${{ env.NEW_VERSION }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
+        with:
+          tag_name: ${{ env.NEW_VERSION }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

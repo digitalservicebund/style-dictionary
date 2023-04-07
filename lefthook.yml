@@ -1,9 +1,15 @@
 pre-commit:
-  parallel: true
+  piped: true
   commands:
-    prettier:
+    1_clean:
+      run: npm run clean
+    2_prettier:
       glob: "*.{ts,js,yaml,md}"
       run: npx prettier --write {staged_files} && git add {staged_files}
-    eslint:
+    3_eslint:
       glob: "*.ts"
       run: npx eslint --fix {staged_files} && git add {staged_files}
+    4_build:
+      run: npm run build
+    5_test:
+      run: npm test

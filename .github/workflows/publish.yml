@@ -17,7 +17,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: npm run postversion
       - run: npm run test
+        
       - run: npm publish
         working-directory: dist
         env:

@@ -1,11 +1,14 @@
 name: Publish package to npm
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
+    inputs:
+      release-type:
+        description: 'Release type (one of): patch, minor, major'
+        required: true
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,13 +17,45 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org
           scope: "@digitalservice4germany"
+          cache: npm
 
       - run: npm ci
       - run: npm run build
-      - run: npm run postversion
       - run: npm run test
-        
-      - run: npm publish
+
+      - name: Git configuration
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Bump release version
+        run: |
+          echo "NEW_VERSION=$(npm --no-git-tag-version version $RELEASE_TYPE)" >> $GITHUB_ENV
+          echo "RELEASE_TAG=latest" >> $GITHUB_ENV
+        env:
+          RELEASE_TYPE: ${{ github.event.inputs.release-type }}
+
+      - name: commit
+        run: |
+          git add "package.json"
+          git commit -m "Release ${{ env.NEW_VERSION }}"
+          git tag ${{ env.NEW_VERSION }}
+
+      - run: npm publish --dry-run
         working-directory: dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push changes to repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "push"
+          # git push origin && git push --tags
+
+      # - name: Create GitHub release
+      #   uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
+      #   with:
+      #     tag_name: ${{ env.NEW_VERSION }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

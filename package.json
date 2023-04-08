@@ -1,6 +1,6 @@
 {
   "name": "@digitalservice4germany/style-dictionary",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Keep styles consistent and synchronized across multiple platforms.",
   "scripts": {
     "clean": "rimraf dist",

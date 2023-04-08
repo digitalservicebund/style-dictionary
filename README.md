@@ -1,5 +1,8 @@
 # DigitalService Style Dictionary
 
+[![version](https://img.shields.io/npm/v/@digitalservice4germany/style-dictionary)](https://www.npmjs.com/package/@digitalservice4germany/style-dictionary)
+[![npm downloads](https://img.shields.io/npm/dw/@digitalservice4germany/style-dictionary)](https://www.npmjs.com/package/@digitalservice4germany/style-dictionary)
+
 > A Style Dictionary is a system that allows you to define styles once, in a way for any platform or language to consume. A single place to create and edit your styles, and a single command exports these rules to all the places you need them […]
 
 – [Style Dictionary](https://amzn.github.io/style-dictionary/)

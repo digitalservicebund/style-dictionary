@@ -1,22 +1,70 @@
 size:
   spacing:
-    xs:
+    0:
+      value: 0
+    1:
+      value: 0.0625
+    2:
+      value: 0.125
+    4:
       value: 0.25
-    s:
+    6:
+      value: 0.375
+    8:
       value: 0.5
-    m:
+    10:
+      value: 0.625
+    12:
+      value: 0.75
+    14:
+      value: 0.875
+    16:
       value: 1
-    l:
+    20:
+      value: 1.25
+    24:
       value: 1.5
-    xl:
+    28:
+      value: 1.75
+    32:
       value: 2
-    2xl:
+    36:
+      value: 2.25
+    40:
+      value: 2.5
+    44:
+      value: 2.75
+    48:
       value: 3
-    3xl:
-      value: 4.5
-    4xl:
+    56:
+      value: 3.5
+    64:
+      value: 4
+    80:
       value: 5
-    5xl:
+    96:
       value: 6
-    6xl:
+    112:
+      value: 7
+    128:
       value: 8
+    144:
+      value: 9
+    160:
+      value: 10
+    176:
+      value: 11
+    192:
+      value: 12
+    208:
+      value: 13
+    224:
+      value: 14
+    240:
+      value: 15
+    288:
+      value: 18
+    320:
+      value: 20
+    384:
+      value: 24

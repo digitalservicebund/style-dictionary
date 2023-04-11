@@ -99,6 +99,10 @@ const config = {
                 label: "Reference",
                 to: "/docs/category/reference",
               },
+              {
+                label: "Explanation",
+                to: "/docs/category/explanation",
+              },
             ],
           },
           {
@@ -112,10 +116,14 @@ const config = {
                 label: "npm",
                 href: "https://www.npmjs.com/package/@digitalservice4germany/style-dictionary",
               },
+              {
+                label: "Colophon",
+                to: "/colophon",
+              },
             ],
           },
         ],
-        copyright: `Last update: ${new Date()}. Created with Docusaurus. Illustrations from unDraw.`,
+        copyright: `Last update: ${new Date()}.`,
       },
       prism: {
         theme: lightCodeTheme,

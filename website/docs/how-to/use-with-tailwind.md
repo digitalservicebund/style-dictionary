@@ -20,13 +20,47 @@ Only a sensible subset of the tokens is available in Tailwind CSS.
 
 Add a `presets` entry to your config file. Or in case you already use (an)other preset, add it to the list.
 
-```sh
+```js
 module.exports = {
-    presets: [
-      require("@digitalservice4germany/style-dictionary/tailwind")
-    ],
-    … your other configuration
+  presets: [
+    require("@digitalservice4germany/style-dictionary/tailwind")
+  ],
+  …
 }
+```
+
+## Add colors
+
+Configure additional colors in `theme.extend.colors` in your `tailwind.config.js`.
+
+```js
+module.exports = {
+  …
+  theme: {
+    extend: {
+      colors: {
+        purple: "#800080", // very new color
+        blue: {
+          500: "#00f" // change hex value of preset's blue-500 color
+        }
+      }
+      …
+    }
+  }
+  …
+}
+```
+
+Note: Using `theme.colors` without `extend` would overwrite all colors from the preset.
+
+## Debugging
+
+### View resolved (full) config
+
+It is often helpful to view the entire (resolved) Tailwind config, after your own config, Tailwind defaults and presets are merged. One way is to run the following snippet in the CLI:
+
+```sh
+node -e 'console.log(JSON.stringify(require("tailwindcss/resolveConfig")(require("./tailwind.config.js")), null, 2));'
 ```
 
 ## More

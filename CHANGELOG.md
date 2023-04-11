@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+...
+
+## [2.0.0] - 2023-04-11
+
 ### Changed
 
 - Change spacing tokens (again). The t-shirt sizes scale is defined but not actually used. De-facto the pixel based sizings are used.

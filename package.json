@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "ts-node build.ts && npm run ts-types",
-    "ts-types": "tsc --emitDeclarationOnly --esModuleInterop --module nodenext --moduleResolution nodenext --target es2015 -d --allowJs ./dist/stitches/index.js ./dist/tailwind/index.js",
+    "ts-types": "tsc --emitDeclarationOnly --esModuleInterop --module nodenext --moduleResolution nodenext --target es2015 -d --allowJs ./dist/tailwind/index.js",
     "lint": "eslint . --ext .ts",
     "postversion": "cp package.json LICENSE README.md ./dist/",
     "test": "jest test/*"

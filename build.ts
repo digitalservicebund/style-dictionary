@@ -76,83 +76,6 @@ StyleDictionary.registerFormat({
   },
 });
 
-StyleDictionary.registerFormat({
-  name: "stitches",
-  formatter: ({ dictionary, file }: { dictionary: Dictionary; file: File }) => {
-    return format(
-      `${fileHeader({ file })}export default ${JSON.stringify(
-        dictionary.allTokens.reduce(
-          (acc, token) => {
-            invariant(token.attributes, "Token attributes are undefined.");
-            const { category, type, item } = token.attributes;
-            // console.log(category, type, item, token);
-
-            if (token.path[0] === "color" && token.path[1] === "base") {
-              if (token.path.at(-1)?.match(/\d{2,3}/)) {
-                return merge(acc, {
-                  theme: {
-                    colors: token.path.slice(2, -2).reduceRight(
-                      (acc, k) => {
-                        return { [k]: acc };
-                      },
-                      {
-                        [`${token.path.at(-2)}${token.path.at(-1)}`]:
-                          token.value,
-                      }
-                    ),
-                  },
-                });
-              }
-              return merge(acc, {
-                theme: {
-                  colors: token.path.slice(2).reduceRight((acc, k) => {
-                    return { [k]: acc };
-                  }, token.value),
-                },
-              });
-            }
-
-            if (category === "size" && type === "spacing") {
-              return merge(acc, {
-                theme: {
-                  space: {
-                    [item as string]: token.value,
-                  },
-                },
-              });
-            }
-
-            if (token.path[0] === "font" && token.path[1] === "family") {
-              return merge(acc, {
-                theme: {
-                  fontFamily: {
-                    [token.name]: token.value,
-                  },
-                },
-              });
-            }
-
-            return acc;
-          },
-          {
-            theme: {
-              colors: {
-                inherit: "inherit",
-                current: "currentColor",
-                transparent: "transparent",
-              },
-              fontFamily: {},
-            },
-          }
-        ),
-        null,
-        2
-      )};`,
-      { parser: "babel" }
-    );
-  },
-});
-
 const getStyleDictionaryConfig = (brand: string, platform: string) => {
   return {
     source: [
@@ -181,17 +104,6 @@ const getStyleDictionaryConfig = (brand: string, platform: string) => {
           {
             destination: "index.js",
             format: "tailwind",
-          },
-        ],
-      },
-      stitches: {
-        buildPath:
-          brand === "default" ? "dist/stitches/" : `dist/stitches/${brand}/`,
-        transforms: ["attribute/cti", "name/cti/camel", "size/rem"],
-        files: [
-          {
-            destination: "index.js",
-            format: "stitches",
           },
         ],
       },

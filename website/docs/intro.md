@@ -8,14 +8,12 @@ Currently the following platforms are supported. Please get in touch if you need
 
 - JavaScript/TypeScript
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Stitches](https://stitches.dev/) (CSS-in-JS)
 
 ## How-to guides
 
 - [Install](./how-to/install.md)
 - [Use with Tailwind](./how-to/use-with-tailwind.md)
 - [Use with JS/TS](./how-to/use-with-javascript.md)
-- [Use with Stitches](./how-to/use-with-stitches.md)
 
 ## Reference
 
@@ -26,5 +24,3 @@ Currently the following platforms are supported. Please get in touch if you need
 
 - [Spacing](./explanation/spacing.md)
 - [Colors](./explanation/colors.md)
-
-

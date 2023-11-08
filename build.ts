@@ -5,7 +5,7 @@ import { merge } from "lodash";
 import { format } from "prettier";
 import invariant from "tiny-invariant";
 import yaml from "yaml";
-import rimraf from "rimraf";
+import { rimrafSync } from "rimraf";
 
 const { fileHeader } = StyleDictionary.formatHelpers;
 
@@ -199,7 +199,7 @@ const getStyleDictionaryConfig = (brand: string, platform: string) => {
   };
 };
 
-rimraf.sync("./dist");
+rimrafSync("./dist");
 
 const platforms = Object.keys(getStyleDictionaryConfig("_", "_").platforms);
 

@@ -29,6 +29,45 @@ test("tokens.json", () => {
             }
           }
         },
+        "border": {
+          "button": {
+            "tertiary": {
+              "default": "#004b76",
+              "hover": "#004b76",
+              "focus": "#004b76",
+              "active": "transparent",
+              "disabled": "#b8bdc3"
+            },
+            "ghost": {
+              "default": "transparent",
+              "hover": "#b8bdc3",
+              "focus": "#b8bdc3",
+              "active": "#b8bdc3",
+              "disabled": "transparent"
+            }
+          }
+        },
+        "text": {
+          "button": {
+            "primary": {
+              "default": "#fff",
+              "active": "#004b76",
+              "disabled": "#b8bdc3"
+            },
+            "secondary": {
+              "default": "#004b76",
+              "disabled": "#b8bdc3"
+            },
+            "tertiary": {
+              "default": "#004b76",
+              "disabled": "#b8bdc3"
+            },
+            "ghost": {
+              "default": "#004b76",
+              "disabled": "#b8bdc3"
+            }
+          }
+        },
         "base": {
           "black": "#0b0c0c",
           "blue": {
@@ -98,56 +137,6 @@ test("tokens.json", () => {
             "800": "#dac23c",
             "900": "#c3a91e"
           }
-        },
-        "border": {
-          "button": {
-            "tertiary": {
-              "default": "#004b76",
-              "hover": "#004b76",
-              "focus": "#004b76",
-              "active": "transparent",
-              "disabled": "#b8bdc3"
-            },
-            "ghost": {
-              "default": "transparent",
-              "hover": "#b8bdc3",
-              "focus": "#b8bdc3",
-              "active": "#b8bdc3",
-              "disabled": "transparent"
-            }
-          }
-        },
-        "text": {
-          "button": {
-            "primary": {
-              "default": "#fff",
-              "active": "#004b76",
-              "disabled": "#b8bdc3"
-            },
-            "secondary": {
-              "default": "#004b76",
-              "disabled": "#b8bdc3"
-            },
-            "tertiary": {
-              "default": "#004b76",
-              "disabled": "#b8bdc3"
-            },
-            "ghost": {
-              "default": "#004b76",
-              "disabled": "#b8bdc3"
-            }
-          }
-        }
-      },
-      "font": {
-        "family": {
-          "sans": "BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif",
-          "serif": "BundesSerifWeb, Cambria, Georgia, \\"Times New Roman\\", serif",
-          "condensed": "BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica, sans-serif"
-        },
-        "weight": {
-          "regular": 400,
-          "bold": 700
         }
       },
       "size": {
@@ -186,6 +175,17 @@ test("tokens.json", () => {
           "288": 18,
           "320": 20,
           "384": 24
+        }
+      },
+      "font": {
+        "family": {
+          "sans": "BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif",
+          "serif": "BundesSerifWeb, Cambria, Georgia, \\"Times New Roman\\", serif",
+          "condensed": "BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica, sans-serif"
+        },
+        "weight": {
+          "regular": 400,
+          "bold": 700
         }
       }
     }"

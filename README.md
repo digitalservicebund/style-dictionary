@@ -1,6 +1,8 @@
-# DigitalService Style Dictionary
+# DigitalService Style Dictionary (deprecated)
 
 **Angie Design System's design tokens**
+
+:warning: DEPRECATED! This package is only for products which already use the "Angie" design system. New products please use the [KERN UX design system](https://www.kern-ux.de) instead.
 
 [![version](https://img.shields.io/npm/v/@digitalservice4germany/style-dictionary)](https://www.npmjs.com/package/@digitalservice4germany/style-dictionary)
 [![npm downloads](https://img.shields.io/npm/dw/@digitalservice4germany/style-dictionary)](https://www.npmjs.com/package/@digitalservice4germany/style-dictionary)

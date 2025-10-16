@@ -3,6 +3,7 @@ name: Publish package to npm
 permissions:
   contents: write
   packages: write
+  id-token: write
 
 on:
   workflow_dispatch:
@@ -47,8 +48,6 @@ jobs:
 
       - run: npm publish
         working-directory: dist
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Push changes to repository
         env:

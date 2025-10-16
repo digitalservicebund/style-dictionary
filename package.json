@@ -16,9 +16,6 @@
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@types/lodash": "^4.17.20",
     "@types/node": "^24.7.1",
@@ -36,8 +33,5 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "yaml": "^2.8.1"
-  },
-  "volta": {
-    "node": "18.15.0"
   }
 }

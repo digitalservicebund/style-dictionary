@@ -8,3 +8,5 @@ updates:
     assignees:
       - "joschka"
     open-pull-requests-limit: 10
+    cooldown:
+      default-days: 3
